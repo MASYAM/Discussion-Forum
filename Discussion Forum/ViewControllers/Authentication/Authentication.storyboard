@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iUZ-Pa-Efp">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FH5-fq-GNT">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="iUZ-Pa-Efp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kJM-zs-TVA">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G7n-a8-4xh" kind="relationship" relationship="rootViewController" id="mge-ta-PtH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vBG-Bq-ueL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1388" y="-212"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="821-4d-g60">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" id="G7n-a8-4xh" customClass="InitialViewController" customModule="Discussion_Forum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpt-gh-H0y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="oEg-6a-rpt">
+                                <rect key="frame" x="138" y="222" width="138" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="7Fh-Dx-dJJ"/>
+                                    <constraint firstAttribute="height" constant="137" id="SD1-dt-ug2"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nge-vO-CVN" customClass="NVActivityIndicatorView" customModule="Discussion_Forum" customModuleProvider="target">
+                                <rect key="frame" x="187" y="507" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oov-OC-2pe"/>
+                                    <constraint firstAttribute="width" constant="40" id="sIM-qa-C02"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="82S-VY-LE2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nge-vO-CVN" firstAttribute="centerX" secondItem="82S-VY-LE2" secondAttribute="centerX" id="30s-PD-McX"/>
+                            <constraint firstItem="oEg-6a-rpt" firstAttribute="centerX" secondItem="82S-VY-LE2" secondAttribute="centerX" id="XSZ-Kw-StG"/>
+                            <constraint firstItem="Nge-vO-CVN" firstAttribute="centerY" secondItem="82S-VY-LE2" secondAttribute="centerY" constant="159" id="dvg-qb-4iU"/>
+                            <constraint firstItem="oEg-6a-rpt" firstAttribute="centerY" secondItem="82S-VY-LE2" secondAttribute="centerY" constant="-77.5" id="jmo-hf-lyb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QXW-7p-ol9"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="Nge-vO-CVN" id="Bdr-Bw-y1I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMi-7N-8Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567.20000000000005" y="-211.84407796101951"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="rHS-0C-fa2">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="J86-re-bdt" customClass="SignInViewController" customModule="Discussion_Forum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bca-PT-RbK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bng-v6-aef" userLabel="loginView">
+                                <rect key="frame" x="0.0" y="173" width="414" height="370"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WW5-VO-80Z" userLabel="segmentedView" customClass="SJFluidSegmentedControl" customModule="Discussion_Forum" customModuleProvider="target">
+                                <rect key="frame" x="24" y="558" width="366" height="44"/>
+                                <color key="backgroundColor" red="0.04546201649" green="0.2432253835" blue="0.24735975760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Wxd-rO-rGs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedSegmentTextColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyCornerRadiusToSelectorView" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-kr-UoO" customClass="TKTransitionSubmitButton" customModule="Discussion_Forum" customModuleProvider="target">
+                                <rect key="frame" x="24" y="652" width="366" height="64"/>
+                                <color key="backgroundColor" red="0.89235009519999997" green="0.60223384349999998" blue="0.0078983780020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Gce-YI-iME"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="J86-re-bdt" eventType="touchUpInside" id="s5j-nb-R4Z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="xDK-yl-ye6">
+                                <rect key="frame" x="157" y="19" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="WZD-2E-RYF"/>
+                                    <constraint firstAttribute="height" constant="100" id="lIO-fS-H0d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SpC-1a-H52"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bng-v6-aef" firstAttribute="centerY" secondItem="SpC-1a-H52" secondAttribute="centerY" constant="-10" id="5Sy-uT-gW0"/>
+                            <constraint firstItem="bng-v6-aef" firstAttribute="leading" secondItem="SpC-1a-H52" secondAttribute="leading" id="9IU-18-3Ew"/>
+                            <constraint firstItem="SpC-1a-H52" firstAttribute="trailing" secondItem="bng-v6-aef" secondAttribute="trailing" id="AlL-r3-Wah"/>
+                            <constraint firstItem="xDK-yl-ye6" firstAttribute="centerX" secondItem="SpC-1a-H52" secondAttribute="centerX" id="Gln-qL-9Sv"/>
+                            <constraint firstItem="xDK-yl-ye6" firstAttribute="top" secondItem="SpC-1a-H52" secondAttribute="top" constant="19" id="Nkj-ea-ffY"/>
+                            <constraint firstItem="SpC-1a-H52" firstAttribute="bottom" secondItem="1Ok-kr-UoO" secondAttribute="bottom" constant="20" id="VvT-jV-K6d"/>
+                            <constraint firstItem="1Ok-kr-UoO" firstAttribute="leading" secondItem="SpC-1a-H52" secondAttribute="leading" constant="24" id="fwQ-dy-JA5"/>
+                            <constraint firstItem="WW5-VO-80Z" firstAttribute="top" secondItem="bng-v6-aef" secondAttribute="bottom" constant="15" id="hBb-zB-Wxa"/>
+                            <constraint firstItem="WW5-VO-80Z" firstAttribute="leading" secondItem="SpC-1a-H52" secondAttribute="leading" constant="24" id="i7L-YY-hH3"/>
+                            <constraint firstItem="SpC-1a-H52" firstAttribute="trailing" secondItem="WW5-VO-80Z" secondAttribute="trailing" constant="24" id="jqa-UP-3jv"/>
+                            <constraint firstItem="1Ok-kr-UoO" firstAttribute="top" secondItem="WW5-VO-80Z" secondAttribute="bottom" constant="50" id="pgs-cv-hTc"/>
+                            <constraint firstItem="SpC-1a-H52" firstAttribute="trailing" secondItem="1Ok-kr-UoO" secondAttribute="trailing" constant="24" id="ze5-Pe-kxY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundScrollView" destination="bng-v6-aef" id="0HY-Dn-gPB"/>
+                        <outlet property="segmentedControl" destination="WW5-VO-80Z" id="pur-Ku-mdv"/>
+                        <outlet property="submitButton" destination="1Ok-kr-UoO" id="nGS-b3-bPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvs-x8-0vF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.57971014492756" y="-212.94642857142856"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1Ok-kr-UoO">
+            <size key="intrinsicContentSize" width="77" height="30"/>
+        </designable>
+    </designables>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="icon-1" width="512" height="512"/>
+    </resources>
+</document>

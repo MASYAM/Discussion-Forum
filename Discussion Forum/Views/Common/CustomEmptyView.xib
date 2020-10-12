@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomEmptyView" customModule="Discussion_Forum" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlF-gq-jrx">
+                    <rect key="frame" x="0.0" y="214" width="375" height="119"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd2-rf-mxx" userLabel="titleLabel">
+                            <rect key="frame" x="37.5" y="44.5" width="300" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Cs4-od-Q0V"/>
+                                <constraint firstAttribute="width" constant="300" id="OHp-8i-P6n"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-d2-WV9" userLabel="titleLabel">
+                            <rect key="frame" x="37.5" y="64.5" width="300" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="IkO-RC-KJm"/>
+                                <constraint firstAttribute="width" constant="300" id="rr5-wd-dMp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="xgO-d2-WV9" firstAttribute="centerX" secondItem="qd2-rf-mxx" secondAttribute="centerX" id="ABX-pn-BsX"/>
+                        <constraint firstItem="xgO-d2-WV9" firstAttribute="top" secondItem="qd2-rf-mxx" secondAttribute="bottom" constant="-10" id="Uwc-5a-jpN"/>
+                        <constraint firstItem="qd2-rf-mxx" firstAttribute="centerY" secondItem="OlF-gq-jrx" secondAttribute="centerY" id="XsO-ef-ebM"/>
+                        <constraint firstItem="qd2-rf-mxx" firstAttribute="centerX" secondItem="OlF-gq-jrx" secondAttribute="centerX" id="eAw-fv-Ywg"/>
+                        <constraint firstAttribute="height" constant="119" id="h7L-s3-4uQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OlF-gq-jrx" secondAttribute="trailing" id="3Lh-vG-9ss"/>
+                <constraint firstItem="OlF-gq-jrx" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-60" id="BzI-Fj-WdM"/>
+                <constraint firstItem="OlF-gq-jrx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IV0-LO-4Mo"/>
+                <constraint firstItem="OlF-gq-jrx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Vzq-5x-ogL"/>
+            </constraints>
+            <connections>
+                <outlet property="subtitleLabel" destination="xgO-d2-WV9" id="jch-Fa-AFH"/>
+                <outlet property="textLabel" destination="qd2-rf-mxx" id="aLe-OT-bov"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

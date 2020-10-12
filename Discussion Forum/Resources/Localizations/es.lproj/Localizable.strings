@@ -1,0 +1,21 @@
+
+"%d years ago" = "Hace %d años atrás";
+"1 year ago" = "Hace 1 año";
+"Last year" = "El año pasado";
+"%d months ago" = "Hace %d meses atrás";
+"1 month ago" = "Hace 1 mes";
+"Last month" = "El mes pasado";
+"%d weeks ago" = "Hace %d semanas atrás";
+"1 week ago" = "Hace 1 semana";
+"Last week" = "La semana pasada";
+"%d days ago" = "Hace %d días atrás";
+"1 day ago" = "Hace 1 día";
+"Yesterday" = "Ayer";
+"%d hours ago" = "Hace %d horas atrás";
+"1 hour ago" = "Hace 1 hora";
+"An hour ago" = "Hace una hora";
+"%d minutes ago" = "Hace %d minutos atrás";
+"1 minute ago" = "Hace 1 minuto";
+"A minute ago" = "Hace un minuto";
+"%d seconds ago" = "Hace %d segundos atrás";
+"Just now" = "Ahora";
